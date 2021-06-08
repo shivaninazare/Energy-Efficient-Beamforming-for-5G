@@ -1,0 +1,11 @@
+ load('optmized_antenna_array.mat')
+show(Design)
+pattern(Design,2.4e9)
+tx= txsite
+show(tx)
+tx.Antenna=Design
+pattern(tx)
+coverage(tx)
+rx=rxsite
+show(rx)
+link(rx,tx)
